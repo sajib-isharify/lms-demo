@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import Layout from "./layout/Layout";
+import  { useState } from "react";
 import Label from "./components/forms/Label";
 import InputPassword from "./components/forms/InputPassword";
 import InputText from "./components/forms/InputText";
@@ -6,7 +7,9 @@ import ErrorMessage from "./components/forms/ErrorMessage";
 import InputEmail from "./components/forms/InputEmail";
 import InputDate from "./components/forms/InputDate";
 import Checkbox from "./components/forms/Checkbox";
-function App() {
+
+const App = () => {
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -29,6 +32,7 @@ function App() {
 
   return (
     <>
+       <Layout />;
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <div className="max-w-md mx-auto p-8 bg-gray-900 rounded shadow-lg">
         <h2 className="text-white text-2xl font-bold mb-4">Sign Up</h2>
