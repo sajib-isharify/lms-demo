@@ -8,7 +8,7 @@ import logoIcon from "../../assets/icon.png";
 
 const Sidebar = () => {
   const { pathname } = useLocation();
-  const [sidebarExpanded, setSidebarExpanded] = useState(false);
+  const [sidebarExpanded, setSidebarExpanded] = useState(true);
 
   // Utility to check if a route is active
   const isActive = (path) => pathname === path || pathname.startsWith(path + "/");
@@ -26,7 +26,7 @@ const Sidebar = () => {
           }`}
         >
           <span className={`transition-all duration-300 ${sidebarExpanded ? "text-lg" : "text-xl"}`}>{item.icon}</span>
-          <span className={`transition-opacity duration-300 ${sidebarExpanded ? "opacity-100" : "opacity-0 hidden"}`}>{item.title}</span>
+          <span className={`transition-opacity text-sm font-normal duration-300 ${sidebarExpanded ? "opacity-100" : "opacity-0 hidden"}`}>{item.title}</span>
         </Link>
       ));
   };
