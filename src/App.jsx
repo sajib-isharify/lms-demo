@@ -1,5 +1,5 @@
 import Layout from "./layout/Layout";
-import SignUp from "./components/forms/SignUp";
+// import SignUp from "./components/forms/SignUp";
 
 const App = () => {
   return (
