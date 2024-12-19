@@ -8,7 +8,7 @@ import logoIcon from "../../assets/icon.png";
 
 const Sidebar = () => {
   const { pathname } = useLocation();
-  const [sidebarExpanded, setSidebarExpanded] = useState(false);
+  const [sidebarExpanded, setSidebarExpanded] = useState(true);
 
   // Utility to check if a route is active
   const isActive = (path) => pathname === path || pathname.startsWith(path + "/");
@@ -21,12 +21,12 @@ const Sidebar = () => {
         <Link
           key={item.path}
           to={item.path}
-          className={`flex items-center gap-4 px-4 py-3 rounded-md text-sm font-medium transition-colors duration-200 hover:bg-gray-700 ${
+          className={`flex items-center gap-4 px-4 py-3 rounded-md text-sm font-normal transition-colors duration-200 hover:bg-gray-700 ${
             isActive(item.path) ? "bg-gray-700 text-[#A8D30F]" : "text-[#FAFAFA]"
           }`}
         >
           <span className={`transition-all duration-300 ${sidebarExpanded ? "text-lg" : "text-xl"}`}>{item.icon}</span>
-          <span className={`transition-opacity duration-300 ${sidebarExpanded ? "opacity-100" : "opacity-0 hidden"}`}>{item.title}</span>
+          <span className={`transition-opacity text-sm font-normal duration-300 ${sidebarExpanded ? "opacity-100" : "opacity-0 hidden"}`}>{item.title}</span>
         </Link>
       ));
   };
@@ -49,7 +49,7 @@ const Sidebar = () => {
       <nav className="mt-4 space-y-1">{renderMenuItems("top")}</nav>
 
       {/* Bottom Menu */}
-      <nav className="absolute bottom-4  text-gray-100 focus:outline-none">{renderMenuItems("bottom")}</nav>
+      <nav className="absolute bottom-4 w-[inherit]">{renderMenuItems("bottom")}</nav>
     </div>
   );
 };
