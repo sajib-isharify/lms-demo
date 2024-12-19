@@ -21,7 +21,7 @@ const Sidebar = () => {
         <Link
           key={item.path}
           to={item.path}
-          className={`flex items-center gap-4 px-4 py-3 rounded-md text-sm font-medium transition-colors duration-200 hover:bg-gray-700 ${
+          className={`flex items-center gap-4 px-4 py-3 rounded-md text-sm font-normal transition-colors duration-200 hover:bg-gray-700 ${
             isActive(item.path) ? "bg-gray-700 text-[#A8D30F]" : "text-[#FAFAFA]"
           }`}
         >
@@ -49,7 +49,7 @@ const Sidebar = () => {
       <nav className="mt-4 space-y-1">{renderMenuItems("top")}</nav>
 
       {/* Bottom Menu */}
-      <nav className="absolute bottom-4  text-gray-100 focus:outline-none">{renderMenuItems("bottom")}</nav>
+      <nav className="absolute bottom-4 w-[inherit]">{renderMenuItems("bottom")}</nav>
     </div>
   );
 };
