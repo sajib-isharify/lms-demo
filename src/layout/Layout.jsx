@@ -2,6 +2,11 @@ import { Outlet } from "react-router-dom";
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import TabComponent from "../components/forms/TabComponent";
+import MyForm from "../components/forms/MyForm";
+import SignIn from "../components/forms/SignIn";
+import DropdownMenu from "../components/forms/DropdownMenu";
+import RadioButton from "../components/forms/RadioButton";
+import ToggleSwitch from "../components/forms/ToggleSwitch";
 
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -16,7 +21,12 @@ const Layout = () => {
 
           <main>
             <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">{<Outlet />}</div>
-            <TabComponent />
+            {/* <TabComponent /> */}
+            {/* <MyForm /> */}
+            {/* <SignIn /> */}
+            {/* <DropdownMenu /> */}
+            {/* <RadioButton /> */}
+            {/* <ToggleSwitch /> */}
           </main>
         </div>
       </div>
