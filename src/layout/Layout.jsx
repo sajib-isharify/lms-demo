@@ -7,6 +7,7 @@ import SignIn from "../components/forms/SignIn";
 import DropdownMenu from "../components/forms/DropdownMenu";
 import RadioButton from "../components/forms/RadioButton";
 import ToggleSwitch from "../components/forms/ToggleSwitch";
+import Navbar from "../components/Navbar/Navbar";
 
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -17,7 +18,7 @@ const Layout = () => {
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-          <div>Nav</div>
+          <Navbar />
 
           <main>
             <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">{<Outlet />}</div>
